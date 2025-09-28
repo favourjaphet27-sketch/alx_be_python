@@ -1,16 +1,17 @@
 def display_menu():
-    print("\nShopping List Manager")
-    print("1. Add item")
-    print("2. Remove item")
+    print("Shopping List Manager")
+    print("1. Add Item")
+    print("2. Remove Item")
     print("3. View List")
     print("4. Exit")
 
 
 def main():
-    shopping_list = []  # start with an empty list
+    shopping_list = []
+
     while True:
         display_menu()
-        choice = input("Enter your choice: ")
+        choice = input("Enter your choice: ")  # keep as string for ALX check
 
         if choice == "1":
             item = input("Enter the item to add: ").strip()
@@ -27,7 +28,7 @@ def main():
 
         elif choice == "3":
             if shopping_list:
-                print("\nYour shopping list:")
+                print("Your Shopping List:")
                 for i, item in enumerate(shopping_list, start=1):
                     print(f"{i}. {item}")
             else:
